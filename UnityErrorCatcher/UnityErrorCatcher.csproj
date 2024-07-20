@@ -54,7 +54,7 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>
-	  copy "$(TargetPath)" $(PLUGINAPI_REFERENCES)\$(TargetFileName)
+	  copy "$(TargetPath)" "$(PLUGINAPI_REFERENCES)\$(TargetFileName)"
 	</PostBuildEvent>
   </PropertyGroup>
 </Project>

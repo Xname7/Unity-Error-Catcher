@@ -22,7 +22,7 @@ internal sealed class Plugin
     {
         _serverErrorLogsDirectoryPath = Path.Combine(PluginHandler.Get(this).PluginDirectoryPath, Server.Port.ToString());
 
-        if (!Directory.Exists(_serverErrorLogsDirectoryPath))
+        if (!Directory.Exists(_serverErrorLogsDirectoryPath) && Config.LoggingToFileEnabled)
             Directory.CreateDirectory(_serverErrorLogsDirectoryPath);
 
         EventManager.RegisterEvents(this);
